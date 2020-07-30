@@ -2,4 +2,5 @@
   applications:
   - instances: 1
     name: ebusagelist-main-shansun
+    random-route: true
     memory: 512M
