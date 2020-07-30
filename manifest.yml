@@ -1,0 +1,5 @@
+---
+  applications:
+  - instances: 1
+    name: ebusagelist-main-shansun
+    memory: 512M

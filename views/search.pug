@@ -1,0 +1,20 @@
+extends mainlayout
+block content
+  h1= title
+  style.
+    body {
+         background: #FAEBD7;
+    }
+  form(action='/search' method='post')
+    label(for='search') Enter consumer number:
+    input#consumerID(type='text', name='consumerID')
+    input(type='submit')
+    
+    ul 
+      each item in searchResults
+        li Consumer Number:  
+         a(href='/search/'+item._id+'/monthview') #{item.consumerID} 
+        li Consumer name: #{item.consumerName}
+        li Address: #{item.address}
+      else
+        li No values to display enter consumer number

@@ -1,0 +1,15 @@
+extends mainlayout
+block content
+  h1= title
+  style.
+    body {
+          background: #FBF6D9;
+    }
+  h5 Choose the Month
+    div
+        form(action='/search/'+data._id+'/monthfind' method="post")
+            label(for='month') Month 
+            select(name='month', id='')
+                each val in data.month
+                    option=val
+                input(type='submit', value='Submit')
